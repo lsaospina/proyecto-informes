@@ -74,9 +74,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'Hatoleasing',
+        'USER': 'sa',
+        # 'PASSWORD': 'b@ck3nd1',
+        # 'HOST': 'The_Beast\SQLEXPRESS',
+        'PASSWORD': 'cebar.2017',
+        'HOST': '192.168.0.26',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 13 for SQL Server'
+        }
     }
 }
 
