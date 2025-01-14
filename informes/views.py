@@ -20,7 +20,7 @@ class vwSolicitudesListView(APIView):
     def get(self, request):
         try:
             # Obtener todos los registros de la vista
-            registros = models.vwSolicitudes.objects.all()
+            registros = models.vwSolicitudes.objects.all()[:1000]
             serializer = serializers.vwSolicitudes(registros, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Exception as e:
