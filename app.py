@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 # URL de tu servicio en Django
-SERVICE_URL = "http://127.0.0.1:8000/informes/vwsolicitudes/"
+SERVICE_URL = "http://186.113.21.35:8060/informes/vwsolicitudes/"
 
 # Consumir datos del servicio
 response = requests.get(SERVICE_URL)
