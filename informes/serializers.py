@@ -10,3 +10,8 @@ class vwSolicitudes(serializers.ModelSerializer):
     class Meta:
         model = models.vwSolicitudes
         fields = '__all__'
+
+class VwSolicitudesVigentesSerliazer(serializers.ModelSerializer):
+    class Meta:
+        model = models.VwSolicitudesVigentes
+        fields = '__all__'
