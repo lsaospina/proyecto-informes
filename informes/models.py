@@ -248,7 +248,7 @@ class vwSolicitudes(models.Model):
 
 class VwSolicitudesVigentes(models.Model):
     TipoSolicitud = models.CharField(max_length=255)
-    NoSolicitud = models.IntegerField()
+    NoSolicitud = models.IntegerField(primary_key=True)
     IdSolicitudBanco = models.CharField(max_length=255)
     ClienteNombre = models.CharField(max_length=255)
     ClienteIdentificacion = models.DecimalField(max_digits=18, decimal_places=0)
@@ -317,4 +317,4 @@ class VwSolicitudesVigentes(models.Model):
 
     class Meta:
         managed = False
-        db_table = ''
+        db_table = 'VW_DESEMBOLSOS_ACTIVOS'
