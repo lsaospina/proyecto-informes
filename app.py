@@ -2,8 +2,13 @@ import streamlit as st
 from multipage import MultiPage
 from pages import home, graficos, formulario  # Importa tus páginas
 
+<<<<<<< HEAD
 # Configura el título de la aplicación
 st.set_page_config(page_title="Mi App", layout="wide")
+=======
+# URL de tu servicio en Django
+SERVICE_URL = "http://186.113.21.35:8060/informes/vwsolicitudes/"
+>>>>>>> 63ceda31241e69e2952b3bfcf29a7b2c1743d24c
 
 # Crea la instancia de navegación
 app = MultiPage()
@@ -47,8 +52,16 @@ app.run()
 # plt.xticks(rotation=45)
 # st.pyplot(fig)
 
+<<<<<<< HEAD
 # # Crear gráfico interactivo con Plotly
 # fig = px.bar(df, x='depto_nombre', y='nosolicitud', 
 #              title='Solicitudes por Departamento', 
 #              labels={'depto_nombre': 'Departamento', 'nosolicitud': 'Número de Solicitudes'})
 # st.plotly_chart(fig)
+=======
+# Crear gráfico interactivo con Plotly
+fig = px.bar(df, x='depto_nombre', y='nosolicitud', 
+             title='Solicitudes por Departamento', 
+             labels={'depto_nombre': 'Departamento', 'nosolicitud': 'Número de Solicitudes'})
+st.plotly_chart(fig)
+>>>>>>> 63ceda31241e69e2952b3bfcf29a7b2c1743d24c
