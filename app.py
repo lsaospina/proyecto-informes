@@ -26,7 +26,7 @@ if opcion == "Inicio":
     st.write("Explora los datos y gráficos disponibles.")
 elif opcion == "Solicites":
     # URL de tu servicio en Django
-    SERVICE_URL = "http://127.0.0.1:8000/informes/vwsolicitudes/"
+    SERVICE_URL = "http://186.113.21.35:8060/informes/vwsolicitudes/"
 
     # Consumir datos del servicio
     response = requests.get(SERVICE_URL)
@@ -52,7 +52,7 @@ elif opcion == "Solicites":
 elif opcion == "Solicitudes Vigentes":
     st.title("Informe de Solicitudes Vigentes")
     
-    SERVICE_URL = "http://127.0.0.1:8000/informes/solicitudes-vigentes/"
+    SERVICE_URL = "http://186.113.21.35:8060/informes/solicitudes-vigentes/"
     
     response = requests.get(SERVICE_URL)
     if response.status_code == 200:
