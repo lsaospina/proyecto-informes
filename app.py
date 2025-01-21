@@ -10,6 +10,8 @@ st.set_page_config(
     layout="wide"
 )
 
+# @st.cache_data
+
 # Sidebar personalizado
 st.sidebar.title("Menú Principal")
 st.sidebar.write("Selecciona una opción para continuar:")
@@ -63,6 +65,13 @@ elif opcion == "Solicitudes Vigentes":
     # Convertir datos a DataFrame
     df = pd.DataFrame(data)
     
+    dfpivot = df.pivot_table(columns='ActividadEconomica', index='TipoSolicitud', values='NoSolicitud', aggfunc='sum')
+    
+    data = st.dataframe(dfpivot, on_select='rerun', selection_mode=['multi-row', 'multi-column'], use_container_width=True)
+    
+    with st.expander('Datos Dataframe'):
+        st.write(data)
+     
     # Crear un contenedor horizontal
     col1, col2, col3, col4 = st.columns(4)
 
